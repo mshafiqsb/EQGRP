@@ -9,15 +9,9 @@ Nested Tar archives have been uncompressed in the [archive_files](/archive_files
 
 # Content
 # Unknown
-
-- **COTTONAXE**
-- **EBBISLAND**  related rce
-- **STOICSURGEON** 
-- **INCISION** 
-- **ITIME** 
 - **JACKLADDER** 
 - **DAMPCROWD**
-- **ELDESTMYdLE**
+- **ELDESTMYDLE**
 - **SUAVEEYEFUL**
 - **WATCHER**
 - **YELLOWSPIRIT**
@@ -33,6 +27,7 @@ Nested Tar archives have been uncompressed in the [archive_files](/archive_files
 - **PORKSERVER** inetd-based server for the **PORK** implant
 - **ri** equivalent to `rpcinfo`
 - **uX_local** Micro X server, likely for remote management
+- **ITIME** Change Date/Time of a last change on a file of an unix filesystem
 
 # Remote Code Execution 
 ## Solaris
@@ -43,6 +38,7 @@ Nested Tar archives have been uncompressed in the [archive_files](/archive_files
 - **dtspcdx_sparc** dtspcd RCE for SunOS 5. -5.8. what a useless exploit
 - **TOOLTALK** DEC, IRIX, or Sol2.6 or earlier Tooltalk buffer overflow RCE
 - **VIOLENTSPIRIT** RCE for ttsession daemon in CDE on Solaris 2.6-2.9 on SPARC and x86
+- **EBBISLAND**  RCE Solaris 2.6 -> 2.10 Inject shellcode in vulnerable rpc service
 
 ## Netscape Server
 - **xp_ns-httpd** NetScape Server RCE
@@ -54,34 +50,36 @@ Nested Tar archives have been uncompressed in the [archive_files](/archive_files
 - **wuftpd** likely `CVE-2001-0550`
 
 ## Web 
-- **ESMARKCONANT** exploits phpBB vulnerability (<[2.0.11](https://www.phpbb.com/community/viewtopic.php?t=240636))
+- **ESMARKCONANT** exploits phpBB remote command execution (<[2.0.11](https://www.phpbb.com/community/viewtopic.php?t=240636)) `CVE-2004-1315`
 - **ELIDESKEW** Public known vulnerablity in [SquirrelMail](https://squirrelmail.org/) versions 1.4.0 - 1.4.7
 - **ELITEHAMMER** Runs against RedFlag Webmail 4, yields user `nobody`
 - **ENVISIONCOLLISION** RCE for phpBB (derivative)
 - **EPICHERO** RCE for Avaya Media Server
+- **COTTONAXE** RCE to retrieve log and information on LiteSpeed Web Server
 
 ## Misc
 - **calserver** spooler RPC based RCE
-- **EARLYSHOVEL** RCE RHL7 using sendmail
+- **EARLYSHOVEL** RCE RHL7 using sendmail  ` CVE-2003-0681 ` ` CVE-2003-0694 `
 - **ECHOWRECKER**/**sambal**: samba 2.2 and 3.0.2a - 3.0.12-5 RCE (with *DWARF* symbols), for FreeBSD, OpenBSD 3.1, OpenBSD 3.2 (with a non-executable stack, zomg), and Linux. Likely `CVE-2003-0201`. There is also a Solaris version
 - **ELECTRICSLIDE** RCE (heap-overflow) in [Squid](http://www.squid-cache.org/), with a chinese-looking vector
 - **EMBERSNOUT** a remote exploit against Red Hat 9.0's httpd-2.0.40-21
 - **ENGAGENAUGHTY**/**apache-ssl-linux** Apache2 mod-ssl RCE (2008), SSLv2
-- **ENTERSEED** Postfix RCE, for 2.0.8-2.1.5
-- **ERRGENTLE**/**xp-exim-3-remote-linux** Exim remote root, likely `CVE-2001-0690`, Exim 3.22-3.35
+- **ENTERSEED** Postfix RCE, for 2.0.8 - 2.1.5
+- **ERRGENTLE**/**xp-exim-3-remote-linux** Exim remote root, likely `CVE-2001-0690`, Exim 3.22 - 3.35
 - **EXPOSITTRAG** exploit pcnfsd version 2.x
 - **extinctspinash**: `Chili!Soft ASP` stuff RCE? and *Cobalt RaQ* too?
 - **KWIKEMART** (**km** binary) RCE for SSH1 padding crc32 thingy (https://packetstormsecurity.com/files/24347/ssh1.crc32.txt.html)
 - **prout** (ab)use of `pcnfs` RPC program (version 2 only) (1999)
-- **slugger**: various printers RCE, looks like `CVE-1999-0078`looks 
+- **slugger**: various printers RCE, looks like `CVE-1999-0078`
 - **statdx** Redhat Linux 6.0/6.1/6.2 rpc.statd remote root exploit (IA32)
-- **telex** Telnetd RCE for RHL ?  `CVE-1999-0192`?
+- **telex** Telnetd RCE for RHL?  `CVE-1999-0192`?
 - **toffeehammer** RCE for `cgiecho` part of `cgimail`, exploits fprintf
 - **VS-VIOLET** Solaris 2.6 - 2.9, something related to [XDMCP](https://en.wikipedia.org/wiki/X_display_manager_(program_type)#X_Display_Manager_Control_Protocol)
 - **SKIMCOUNTRY** Steal mobile phone log data
 - **SLYHERETIC_CHECKS** Check if a target is ready for **SLYHERETIC** (not included)
 - **EMPTYBOWL** RCE for MailCenter Gateway (mcgate) - an application that comes with Asia Info Message Center mailserver; buffer overflow allows a string passed to popen() call to be controlled by an attacker; arbitraty cmd execute known to work only for AIMC Version 2.9.5.1
-
+- **CURSEHAPPY** Parser of CDR (Call Detail Records) (siemens, alcatel, other containing isb hki lhr files) probably upgrade of ORLEANSTRIDE
+- **ORLEANSTRIDE** Parser of CDR (Call Detail Records)
 
 # Anti-forensic
 - **toast**: `wtmps` editor/manipulator/querier
@@ -96,17 +94,17 @@ Nested Tar archives have been uncompressed in the [archive_files](/archive_files
 - **FUNNELOUT**: database-based web-backdoor for `vbulletin`
 - **hi** UNIX bind shell
 - **jackpop** bind shell for SPARC
-- **NOPEN** Backdoor? A RAT or post-exploitation shell consisting of a client and a server that encrypts data using RC6 [source](http://electrospaces.blogspot.nl/p/nsas-tao-division-codewords.html)
-- **ORLEANSTRIDE**
+- **NOPEN** Backdoor? A RAT or post-exploitation shell consisting of a client and a server that encrypts data using RC6 [source](http://electrospaces.blogspot.nl/p/nsas-tao-division-codewords.html)** SunOS5.8
 - **SAMPLEMAN / ROUTER TOUCH** Clearly hits Cisco via some sort of redirection via a tool on port 2323... (thanks to @cynicalsecurity)
 - **SECONDDATE** Implant for Linux/FreeBSD/Solaris/JunOS
 - **SHENTYSDELIGHT** Linux keylogger
 - **SIDETRACK** implant used for **PITCHIMPAIR**
 - **SIFT** Implant for Solaris/Linux/FreeBSD
 - **SLYHERETIC** SLYHERETIC is a light-weight implant for AIX 5.1:-5.2 Uses Hide-in-Plain-Sight techniques to provide stealth.
-- **STRIFEWORLD**: Network-monitoring for UNIX,  needs to be launched as root. Strifeworld is a program that captures data transmitted as part of TCP connections and stores the data in a memory for analysis. Strifeworld reconstructs the actual data streams and stores each session in a file for later analysis.
+- **STRIFEWORLD**: Network-monitoring for UNIX, needs to be launched as root. Strifeworld is a program that captures data transmitted as part of TCP connections and stores the data in a memory for analysis. Strifeworld reconstructs the actual data streams and stores each session in a file for later analysis.
 - **SUCTIONCHAR**: 32 or 64 bit OS, solaris sparc 8,9, Kernel level implant - transparent, sustained, or realtime interception of processes input/output vnode traffic, able to intercept ssh, telnet, rlogin, rsh, password, login, csh, su, …
-
+- **STOICSURGEON** Rootkit/Backdoor Linux MultiArchi
+- **INCISION** Rootkit/Backdoor Linux Can be upgrade to StoicSurgeon(more recent version)
 
 ## CnC
 - **Seconddate_CnC**: CnC for **SECONDDATE**
@@ -145,5 +143,5 @@ Nested Tar archives have been uncompressed in the [archive_files](/archive_files
 # Interesting stuff
 - [default passwords list](https://github.com/x0rz/EQGRP/blob/33810162273edda807363237ef7e7c5ece3e4100/Linux/etc/.oprc) (courtesy of x0rz)
 
-- [.gov.ru](https://github.com/x0rz/EQGRP/blob/1667dacddf710082a1567e4e481f416876f432b7/archive_files/stmoicctrls/stoicctrls/stoicsurgeon_ctrl__v__1.5.13.4_x86-freebsd-5.3) 
+- [.gov.ru](https://github.com/x0rz/EQGRP/blob/1667dacddf710082a1567e4e481f416876f432b7/archive_files/stoicctrls/stoicctrls/stoicsurgeon_ctrl__v__1.5.13.4_x86-freebsd-5.3) 
  (stoicsurgeon_ctrl__v__1.5.13.5_x86-freebsd-5.3-sassyninja-mail.aprf.gov.ru) (wow!)
